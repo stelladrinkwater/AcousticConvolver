@@ -18,10 +18,23 @@ It will also take these tacks, which will deactive the command line communicatio
 """
 
 import sys
+import os
 import sounddevice as sd
 
 # Sampling rate is 96000 by default but can be changed here
 sampling = 96000
+
+def getFileNames():
+    """
+    Reads source files in audio/source folder, returns list of their names
+    """
+    wd = os.path.dirname(os.path.realpath(__file__)) # Working directory
+    pd = os.path.dirname(wd) # Parent directory, one up
+    nd = pd + "/audio/source" # New directory, audio
+    os.chdir(nd)
+    #print(os.listdir()) # Testing purposes
+
+    return os.listdir()
 
 def getInput():
     # Initialize main variables
