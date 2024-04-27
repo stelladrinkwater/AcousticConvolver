@@ -36,6 +36,8 @@ def getFileNames():
 
     return os.listdir()
 
+print(getFileNames())
+
 def getInput():
     # Initialize main variables
     instName = ''
