@@ -1,0 +1,3 @@
+pip3 install pandas shutil sys os sounddevice
+
+Note: confirm sys and os arent already included
